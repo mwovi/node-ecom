@@ -14,9 +14,9 @@ const Blog = require('./models/Blog');
 const app = express();
 //connect to mongoose
 mongoose.connect('mongodb+srv://peter:peter@diva.xugwa.mongodb.net/crudblog?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
+  // useCreateIndex: true,
 });
 
 //set template engine
