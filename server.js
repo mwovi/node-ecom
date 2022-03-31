@@ -12,9 +12,8 @@ const methodOverride = require('method-override');
 const blogRouter = require('./routes/blogs');
 const Blog = require('./models/Blog');
 const app = express();
-
 //connect to mongoose
-mongoose.connect('mongodb://localhost/crudblog', {
+mongoose.connect('mongodb+srv://peter:peter@diva.xugwa.mongodb.net/crudblog?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -46,6 +45,6 @@ app.use('/blogs', blogRouter);
 //listen port
 // app.listen(5001);
 
-app.listen(process.env.PORT || 4000, function () {
+app.listen(process.env.PORT || 4001, function () {
   console.log("Server is listening on port 4000");
 });
