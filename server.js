@@ -13,10 +13,10 @@ const blogRouter = require('./routes/blogs');
 const Blog = require('./models/Blog');
 const app = express();
 //connect to mongoose
-mongoose.connect('mongodb+srv://peter:peter@diva.xugwa.mongodb.net/crudblog?retryWrites=true&w=majority', {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
-  // useCreateIndex: true,
+mongoose.connect('mongodb://127.0.0.1:27017', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
 });
 
 //set template engine
@@ -45,6 +45,6 @@ app.use('/blogs', blogRouter);
 //listen port
 // app.listen(5001);
 
-app.listen(process.env.PORT || 4001, function () {
-  console.log("Server is listening on port 4000");
+app.listen(process.env.PORT || 5001, function () {
+  console.log("Server is listening on port 5001");
 });
